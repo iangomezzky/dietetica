@@ -1,4 +1,5 @@
 import './App.css'
+import logo from './assets/logo.png'
 
 function App() {
   return (
@@ -27,10 +28,14 @@ function App() {
 
       <div className="div-bloque-padre">
 
-        <div className="div-bloque-1">
-          <h2 className="titulo-bloque">
-            Bloque 1
-          </h2>
+        <div className="div-logo">
+          <div className="div-">
+            <img
+              className="logo"
+              src={logo}
+              alt="Nutrigo"
+            />
+          </div>
 
           <p className="parrafo-bloque">
             Este es el contenido del bloque 1.
