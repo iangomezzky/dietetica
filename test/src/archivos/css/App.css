@@ -1,21 +1,157 @@
 /* Cinta continua: sin separación con la cabecera. */
-.div-rotativo { width: 100%; overflow: hidden; background: var(--color-bandita); color: var(--color-texto); margin: 0; }
-.cinta { display: flex; width: max-content; animation: cinta-continua 24s linear infinite; }
-.cinta-grupo { flex: 0 0 auto; min-width: 100vw; display: flex; justify-content: space-around; align-items: center; gap: 48px; padding: 10px 24px; white-space: nowrap; font-size: 12px; line-height: 1.5; }
-@keyframes cinta-continua { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-.tienda-ceja { display: block; font-size: 11px; letter-spacing: .1em; color: #52694f; }
-.tienda-promo, .tienda-beneficios { width: min(1200px, calc(100% - 40px)); margin-inline: auto; }
-.tienda-promo { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; background: #e9efde; border-radius: 14px; }
-.tienda-promo h2 { margin: 10px 0; font-size: 28px; letter-spacing: -.03em; }
-.tienda-promo p { margin-bottom: 0; font-size: 14px; line-height: 1.7; }
-.tienda-promo-icono { font-size: 64px; flex-shrink: 0; }
-.tienda-resumen { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px; margin-top: 30px; border-block: 1px solid #d5ddce; font-size: 13px; }
-.tienda-resumen button { padding: 10px 14px; border: 1px solid #cbd5c8; background: transparent; border-radius: 4px; font: inherit; }
-.tienda-beneficios { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-block: 48px; }
-.tienda-beneficios > div { padding-top: 20px; border-top: 1px solid #d5ddce; }
-.tienda-beneficios h3 { font-size: 15px; }.tienda-beneficios p { font-size: 12px; line-height: 1.7; color: #60716a; }
-button, input { font: inherit; }
-html { scroll-padding-top: 24px; }
-@media (max-width: 600px) { .cinta-grupo { min-width: 680px; gap: 32px; } .tienda-promo { padding: 24px; } .tienda-promo-icono { display: none; } .tienda-beneficios { grid-template-columns: 1fr; } .tienda-resumen { flex-wrap: wrap; } }
+.div-rotativo {
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-bandita);
+  color: var(--color-texto);
+  margin: 0;
+}
+
+.cinta {
+  display: flex;
+  width: max-content;
+  animation: cinta-continua 24s linear infinite;
+}
+
+.cinta-grupo {
+  flex: 0 0 auto;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 48px;
+  padding: 10px 24px;
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@keyframes cinta-continua {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tienda-ceja {
+  display: block;
+  font-size: 11px;
+  letter-spacing: .1em;
+  color: #52694f;
+}
+
+.tienda-promo,
+.tienda-beneficios {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.tienda-promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px 32px;
+  background: #e9efde;
+  border-radius: 14px;
+}
+
+.tienda-promo h2 {
+  margin: 10px 0;
+  font-size: 28px;
+  letter-spacing: -.03em;
+}
+
+.tienda-promo p {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.tienda-promo-icono {
+  font-size: 64px;
+  flex-shrink: 0;
+}
+
+.tienda-resumen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  border-block: 1px solid #d5ddce;
+  font-size: 13px;
+}
+
+.tienda-resumen button {
+  padding: 10px 14px;
+  border: 1px solid #cbd5c8;
+  background: transparent;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.tienda-beneficios {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin-block: 48px;
+}
+
+.tienda-beneficios>div {
+  padding-top: 20px;
+  border-top: 1px solid #d5ddce;
+}
+
+.tienda-beneficios h3 {
+  font-size: 15px;
+}
+
+.tienda-beneficios p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #60716a;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+html {
+  scroll-padding-top: 24px;
+}
+
+@media (max-width: 600px) {
+  .cinta-grupo {
+    min-width: 680px;
+    gap: 32px;
+  }
+
+  .tienda-promo {
+    padding: 24px;
+  }
+
+  .tienda-promo-icono {
+    display: none;
+  }
+
+  .tienda-beneficios {
+    grid-template-columns: 1fr;
+  }
+
+  .tienda-resumen {
+    flex-wrap: wrap;
+  }
+}
+
 /* Respeta la preferencia del sistema; fuera de ella la cinta siempre se mueve. */
-@media (prefers-reduced-motion: reduce) { .cinta { animation: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .cinta {
+    animation: none;
+  }
+}

@@ -1,5 +1,6 @@
 import "../css/App.css";
 
+import Combos from "./combos.jsx"
 import Cabecera from "./cabecera.jsx";
 import Footer from "./footer.jsx";
 import Productos from "./Productos.jsx";
@@ -22,25 +23,15 @@ function App() {
       <Novedades />
 
       {/* PROMOCIÓN */}
-      <section className="tienda-promo" id="promociones">
-        <div>
-          <span className="tienda-ceja">
-            PROMOCIÓN DE EJEMPLO
-          </span>
 
-          <h2>Un mix para cada momento</h2>
+      <Combos />
 
-          <p>
-            Frutos secos, granolas y semillas
-            para completar tu despensa.
-          </p>
-        </div>
 
-        <span className="tienda-promo-icono" aria-hidden="true">
-          🥜 🌾
-        </span>
-      </section>
 
+{/* 
+          <h2>Un mix para cada momento</h2> */}
+
+  
       <Productos />
 
       {/* BENEFICIOS */}

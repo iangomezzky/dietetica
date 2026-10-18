@@ -18,7 +18,7 @@ export default function Cabecera() {
             />
 
             <span className="ng-marca-texto">
-              <strong>NUTRIGO</strong>
+              <strong>NUTRIGÓ</strong>
               <small>Santa Fe Centro</small>
             </span>
           </a>
