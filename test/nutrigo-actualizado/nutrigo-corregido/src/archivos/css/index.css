@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: montserrat, helvetica, sans-serif;
+}
+
+.boton {
+  background-color: var(--color-boton);
+  color: var(--color-boton-texto);
+}
+
+.boton:hover {
+  background-color: var(--color-boton-hover);
+}
+
+:root {
+  /* Fondos */
+  --color-fondo: #F7F4EC;
+  --color-cabecera: #00504B;
+  --color-footer: #003E3A;
+  --color-bandita: #F3DDA6;
+
+  /* Tarjetas */
+  --color-tarjeta: #FFFFFF;
+  --color-tarjeta-hover: #F0F5F1;
+  --color-borde: #DCE3DA;
+
+  /* Textos */
+  --color-texto: #203D36;
+  --color-texto-secundario: #60716A;
+  --color-texto-claro: #FFF8E8;
+
+  /* Botón principal */
+  --color-boton: #00504B;
+  --color-boton-hover: #003E3A;
+  --color-boton-texto: #FFFFFF;
+
+  /* Botón sobre la cabecera */
+  --color-boton-acento: #F3DDA6;
+  --color-boton-acento-hover: #E9CC88;
+  --color-boton-acento-texto: #203D36;
+
+  /* Botón secundario */
+  --color-boton-secundario-hover: #E7EEE8;
+
+  /* Cuenta y carrito */
+  --color-icono-hover: #14635E;
+
+  /* Enlaces */
+  --color-enlace: #00504B;
+  --color-enlace-hover: #003E3A;
+
+  /* Ofertas y foco del teclado */
+  --color-oferta: #A8442D;
+  --color-foco: #1C7778;
+}
