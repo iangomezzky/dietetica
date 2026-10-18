@@ -1,0 +1,26 @@
+.novedades { width: min(1200px, calc(100% - 40px)); margin: 40px auto 48px; }
+.novedades-encabezado { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 24px; }
+.novedades h1 { margin: 8px 0 0; font-size: clamp(30px, 4vw, 46px); letter-spacing: -.045em; }
+.novedades-controles { display: flex; gap: 8px; }
+.novedades-controles button { width: 48px; height: 48px; border: 1px solid #ccd5c8; border-radius: 50%; background: transparent; color: #00504b; font-size: 23px; cursor: pointer; }
+.novedades-controles button:hover { background: #00504b; color: #fff8e8; }
+.novedades-pista { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
+.novedades-pista::-webkit-scrollbar { display: none; }
+.novedad { position: relative; isolation: isolate; flex: 0 0 100%; min-width: 0; min-height: 390px; padding: 36px 42px; display: flex; flex-direction: column; justify-content: space-between; gap: 50px; overflow: hidden; scroll-snap-align: start; border-radius: 14px; }
+.novedad-verde { background: #e2e9dd; }
+.novedad-crema { background: #f3dda6; }
+.novedad-rosa { background: #edd8cb; }
+.novedad-numero { font-size: 11px; font-weight: 600; letter-spacing: .12em; }
+.novedad h2 { position: relative; z-index: 1; margin: 0; font-size: clamp(32px, 5vw, 58px); line-height: 1.06; letter-spacing: -.045em; }
+.novedad p { position: relative; z-index: 1; margin: 18px 0; font-size: 14px; line-height: 1.7; max-width: 75%; }
+.novedad a { position: relative; z-index: 1; display: inline-flex; align-items: center; min-height: 44px; color: #00504b; font-size: 13px; font-weight: 600; text-underline-offset: 6px; }
+.novedad-decoracion { position: absolute; right: 6%; top: 50%; transform: translateY(-50%) rotate(-12deg); font-size: clamp(100px, 15vw, 210px); opacity: .65; z-index: 0; pointer-events: none; }
+.novedades-pie { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-top: 16px; }
+.novedades-pie > span { font-size: 10px; color: #60716a; }
+.novedades-indicadores { display: flex; gap: 5px; }
+.novedades-indicadores button { position: relative; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.novedades-indicadores button::before { content: ''; position: absolute; top: 20px; left: 8px; right: 8px; height: 3px; background: #cad2c4; border-radius: 4px; }
+.novedades-indicadores button.activo::before { background: #00504b; }
+.novedades :focus-visible { outline: 2px solid #00504b; outline-offset: 3px; }
+@media (max-width: 600px) { .novedad { min-height: 350px; padding: 26px 24px; gap: 50px; } .novedad p { max-width: 90%; } .novedad-decoracion { right: 4%; top: 35%; opacity: .3; } .novedades-pie { gap: 8px; } }
+@media (prefers-reduced-motion: reduce) { .novedades-pista { scroll-behavior: auto; } }

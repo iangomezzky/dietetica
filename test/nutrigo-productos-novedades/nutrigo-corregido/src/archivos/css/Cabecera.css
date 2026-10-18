@@ -1,0 +1,408 @@
+/* COLORES Y CONTENEDOR */
+.ng-header {
+  --ng-verde: #00504b;
+  --ng-tinta: #fff8e8;
+  --ng-crema: #f7f4ec;
+  --ng-linea: rgb(255 248 232 / 24%);
+  --ng-suave: #d8e5df;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #00504b;
+  background-image: linear-gradient(90deg, rgb(0 40 37 / 48%), rgb(0 40 37 / 28%)), url("../../assets/fondo-nutrigo.png");
+  background-size: auto, 560px auto;
+  background-position: center;
+  color: var(--ng-tinta);
+  border-bottom: 1px solid var(--ng-linea);
+
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.ng-header,
+.ng-header *,
+.ng-header *::before,
+.ng-header *::after {
+  box-sizing: border-box;
+}
+
+.ng-header-interior {
+  width: min(1320px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+/* ENLACES */
+.ng-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ng-header a:focus-visible {
+  outline: 2px solid #f3dda6;
+  outline-offset: 5px;
+}
+
+/* FILA PRINCIPAL */
+.ng-header-superior {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 32px;
+
+  padding-block: 27px;
+}
+
+.ng-header-superior > * {
+  min-width: 0;
+}
+
+/* MARCA */
+.ng-marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Única regla de tamaño del logo en escritorio */
+.ng-header .ng-marca .ng-logo {
+  display: block;
+  position: static;
+
+  width: 58px;
+  height: 58px;
+  min-width: 58px;
+  max-width: 58px;
+  min-height: 58px;
+  max-height: 58px;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  box-shadow: 0 14px 26px rgb(0 20 18 / 48%), 0 5px 9px rgb(0 20 18 / 32%), 0 0 0 3px rgb(243 221 166 / 35%);
+
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ng-marca-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ng-marca-texto strong {
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.ng-marca-texto small {
+  color: var(--ng-suave);
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+/* INFORMACIÓN DEL LOCAL */
+.ng-datos {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 20px;
+}
+
+.ng-dato {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+
+  min-width: 0;
+  padding-left: 18px;
+  border-left: 1px solid var(--ng-linea);
+}
+
+.ng-dato-etiqueta {
+  color: var(--ng-suave);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ng-dato-valor {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.ng-dato-detalle {
+  color: var(--ng-suave);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+a.ng-dato:hover .ng-dato-valor {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ADMINISTRACIÓN Y CARRITO */
+.ng-utilidades {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.ng-header .ng-ingreso {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 44px;
+
+  font-size: 12px;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.ng-header .ng-ingreso:hover {
+  color: var(--ng-suave);
+}
+
+.ng-carrito {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+
+  min-height: 44px;
+  padding: 10px 16px;
+
+  border: 1px solid rgb(243 221 166 / 65%);
+  border-radius: 3px;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.ng-header .ng-carrito:hover {
+  background-color: #f3dda6;
+  color: #203d36;
+}
+
+/* BOLSA DEL CARRITO */
+.ng-bolsa {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+
+  width: 15px;
+  height: 16px;
+  margin-top: 4px;
+
+  border: 1.5px solid currentColor;
+  border-radius: 1px;
+}
+
+.ng-bolsa::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 3px;
+
+  width: 6px;
+  height: 7px;
+
+  border: 1.5px solid currentColor;
+  border-bottom: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+/* NAVEGACIÓN */
+.ng-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  min-height: 58px;
+  border-top: 1px solid var(--ng-linea);
+}
+
+.ng-nav-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.ng-nav-enlaces a {
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 48px;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.ng-nav-enlaces a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.ng-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  min-height: 44px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.ng-whatsapp > span {
+  color: var(--ng-suave);
+}
+
+.ng-whatsapp strong {
+  color: #f3dda6;
+  font-weight: 700;
+}
+
+.ng-whatsapp:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* TABLETS */
+@media (max-width: 1150px) {
+  .ng-header-superior {
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+  }
+
+  .ng-datos {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .ng-dato:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+/* CELULARES */
+@media (max-width: 650px) {
+  .ng-header-interior {
+    width: calc(100% - 32px);
+  }
+
+  .ng-header-superior {
+    padding-block: 22px;
+    gap: 22px 12px;
+  }
+
+  .ng-header .ng-marca .ng-logo {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+  }
+
+  .ng-marca {
+    gap: 8px;
+  }
+
+  .ng-marca-texto strong {
+    font-size: 20px;
+  }
+
+  .ng-marca-texto small {
+    font-size: 10px;
+  }
+
+  .ng-utilidades {
+    gap: 12px;
+  }
+
+  .ng-carrito {
+    padding-inline: 10px;
+  }
+
+  .ng-datos {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 12px;
+  }
+
+  .ng-direccion {
+    grid-column: 1 / -1;
+  }
+
+  .ng-dato:nth-child(2) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .ng-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-bottom: 8px;
+  }
+
+  .ng-nav-enlaces {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .ng-whatsapp {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 12px;
+
+    border-top: 1px solid var(--ng-linea);
+  }
+}
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 370px) {
+  .ng-header-superior {
+    grid-template-columns: 1fr;
+  }
+
+  .ng-utilidades {
+    justify-content: space-between;
+  }
+
+  .ng-datos {
+    grid-row: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ng-carrito {
+    transition: none;
+  }
+}
+/* Horarios: cada turno tiene su etiqueta y su franja. */
+.ng-horarios { display: grid; gap: 7px; margin: 0; width: 100%; }
+.ng-horarios > div { display: grid; grid-template-columns: 48px 1fr; align-items: baseline; gap: 8px; }
+.ng-horarios dt { color: var(--ng-suave); font-size: 10px; }
+.ng-horarios dd { margin: 0; font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ng-horarios dd span { color: #f3dda6; padding-inline: 2px; }
+.ng-marca-texto small { color: #f3dda6; }

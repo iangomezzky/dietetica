@@ -1,20 +1,23 @@
-NUTRIGO — CABECERA ACTUALIZADA
+NUTRIGO — PRODUCTOS Y NOVEDADES
 
-Extraé en una carpeta nueva y abrila en VS Code.
-Dentro de esa carpeta ejecutá: npm ci
-Luego: npm run dev
-Detené el servidor anterior con Ctrl+C y abrí la URL de la nueva terminal.
+Extraé en carpeta nueva. En esa carpeta: npm ci y luego npm run dev.
 
-Cambios: fondo ilustrado en cabecera, logo circular con sombra, carrito antes de Ingresá, WhatsApp en pestaña nueva, horarios por turno.
-Navegación: Novedades > Promociones > Productos > El local.
-Montserrat. Componentes sencillos y CSS; sin nueva lógica JavaScript.
-El tablón se desplaza manualmente. /admin sigue pendiente y el carrito/buscador son visuales.
+Componentes nuevos: Producto.jsx (molde), Productos.jsx (ejemplos), Novedades.jsx.
+Cada componente importa su CSS. App.css fue limpiado para retirar los estilos viejos.
 
-Archivos principales modificados:
-src/archivos/jsx/Cabecera.jsx
-src/archivos/css/Cabecera.css
-src/archivos/jsx/App.jsx
-src/archivos/css/App.css
-src/archivos/jsx/Footer.jsx
-src/archivos/css/Footer.css
-src/assets/fondo-nutrigo.png
+ESTADOS CSS
+<Producto ... className="sin-stock"> oculta el botón y muestra la banda diagonal.
+<Producto ... className="oculto"> oculta toda la tarjeta.
+Podés combinar: className="sin-stock oculto".
+Al quitar sin-stock reaparece el botón. Las etiquetas se pasan entre las etiquetas del componente, máximo dos visibles.
+Los ejemplos no afirman aptitud para celíacos o diabéticos: agregá esas etiquetas solo si corresponden al producto real.
+Las imágenes son marcadores ilustrativos; reemplazá los SVG importados por tus fotos.
+
+LÓGICA PENDIENTE (a tu cargo)
+Flechas/indicadores, temporizador de novedades, Mostrar todo, búsqueda y carrito.
+Flechas: .novedades-anterior y .novedades-siguiente. Pista: #novedades-pista.
+Estado del indicador: .activo. No se añadió temporizador ni eventos.
+La pista permite desplazamiento manual; los botones son solo presentación.
+La cinta sí tiene movimiento con CSS y no deja espacio con el header.
+Si el sistema tiene movimiento reducido activado, la cinta se queda quieta por accesibilidad.
+/admin sigue pendiente.

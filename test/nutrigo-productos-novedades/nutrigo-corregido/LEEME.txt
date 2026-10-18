@@ -1,0 +1,23 @@
+NUTRIGO — PRODUCTOS Y NOVEDADES
+
+Extraé en carpeta nueva. En esa carpeta: npm ci y luego npm run dev.
+
+Componentes nuevos: Producto.jsx (molde), Productos.jsx (ejemplos), Novedades.jsx.
+Cada componente importa su CSS. App.css fue limpiado para retirar los estilos viejos.
+
+ESTADOS CSS
+<Producto ... className="sin-stock"> oculta el botón y muestra la banda diagonal.
+<Producto ... className="oculto"> oculta toda la tarjeta.
+Podés combinar: className="sin-stock oculto".
+Al quitar sin-stock reaparece el botón. Las etiquetas se pasan entre las etiquetas del componente, máximo dos visibles.
+Los ejemplos no afirman aptitud para celíacos o diabéticos: agregá esas etiquetas solo si corresponden al producto real.
+Las imágenes son marcadores ilustrativos; reemplazá los SVG importados por tus fotos.
+
+LÓGICA PENDIENTE (a tu cargo)
+Flechas/indicadores, temporizador de novedades, Mostrar todo, búsqueda y carrito.
+Flechas: .novedades-anterior y .novedades-siguiente. Pista: #novedades-pista.
+Estado del indicador: .activo. No se añadió temporizador ni eventos.
+La pista permite desplazamiento manual; los botones son solo presentación.
+La cinta sí tiene movimiento con CSS y no deja espacio con el header.
+Si el sistema tiene movimiento reducido activado, la cinta se queda quieta por accesibilidad.
+/admin sigue pendiente.
