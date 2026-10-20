@@ -1,6 +1,10 @@
 import "../css/footer.css";
 
 export default function Footer() {
+
+
+
+
   return (
     <footer className="ng-footer" id="contacto">
       <div className="ng-footer-interior">
@@ -13,7 +17,7 @@ export default function Footer() {
         <div className="ng-footer-principal">
           <div className="ng-footer-identidad">
             <a className="ng-footer-marca" href="#inicio">
-              nutrigÓ<span>.</span>
+              nutrigó<span>.</span>
             </a>
 
             <p>
@@ -31,7 +35,7 @@ export default function Footer() {
           </nav>
 
           <div className="ng-footer-charla">
-            <span className="ng-footer-titulo">¿Te damos una mano?</span>
+            <span className="ng-footer-titulo">¿Te interesa una franquicia?</span>
 
             <a
               className="ng-footer-whatsapp"

@@ -1,14 +1,76 @@
 import "../css/Novedades.css";
-
+import { useEffect } from "react";
 export default function Novedades() {
+
+
+  function anterior() {
+
+
+    const flechaAnterior = document.querySelector("#novedades-pista")
+
+    if (!flechaAnterior) return;
+
+
+    flechaAnterior.scrollBy({
+      left: -(flechaAnterior.clientWidth + 20),
+      behavior: "smooth",
+    });
+  }
+
+
+
+  function siguiente() {
+
+
+    const flechaSiguiente = document.querySelector("#novedades-pista")
+
+    if (!flechaSiguiente) return;
+
+
+    flechaSiguiente.scrollBy({
+      left: flechaSiguiente.clientWidth + 20,
+      behavior: "smooth",
+    });
+
+
+  }
+
+
+  useEffect(() => {
+    const temporizador = setInterval(() => {
+      const pista = document.querySelector("#novedades-pista");
+
+      if (!pista) return;
+
+      const llegoAlFinal =
+        pista.scrollLeft + pista.clientWidth >= pista.scrollWidth - 2;
+
+      if (llegoAlFinal) {
+        pista.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+      } else {
+        pista.scrollBy({
+          left: pista.clientWidth + 20,
+          behavior: "smooth",
+        });
+      }
+    }, 5000);
+
+    return () => clearInterval(temporizador);
+  }, []);
+
+
+
   return (
     <section className="novedades" id="novedades" aria-labelledby="titulo-novedades">
       <div className="novedades-encabezado">
         <div><span className="tienda-ceja">EL TABLÓN</span><h1 id="titulo-novedades">Novedades</h1></div>
         <div className="novedades-controles">
           {/* Conectá acá tu lógica de desplazamiento. */}
-          <button type="button" className="novedades-anterior" aria-label="Novedad anterior" aria-controls="novedades-pista">←</button>
-          <button type="button" className="novedades-siguiente" aria-label="Novedad siguiente" aria-controls="novedades-pista">→</button>
+          <button type="button" className="novedades-anterior" aria-label="Novedad anterior" aria-controls="novedades-pista" onClick={anterior}>←</button>
+          <button type="button" className="novedades-siguiente" aria-label="Novedad siguiente" aria-controls="novedades-pista" onClick={siguiente}>→</button>
         </div>
       </div>
       <div className="novedades-pista" id="novedades-pista" tabIndex="0" aria-label="Tarjetas de novedades">
@@ -31,9 +93,9 @@ export default function Novedades() {
         <span>Nutrigo · Santa Fe Centro</span>
         {/* La lógica del temporizador y el estado activo queda pendiente. */}
         <div className="novedades-indicadores" aria-label="Elegir novedad">
-          <button className="activo" type="button" aria-label="Mostrar novedad 1" aria-current="true" aria-controls="novedades-pista" />
-          <button type="button" aria-label="Mostrar novedad 2" aria-controls="novedades-pista" />
-          <button type="button" aria-label="Mostrar novedad 3" aria-controls="novedades-pista" />
+          <button className="activo" type="button" aria-label="Mostrar novedad 1" aria-current="true" aria-controls="novedades-pista" onClick={anterior} />
+          <button type="button" aria-label="Mostrar novedad 2" aria-controls="novedades-pista" onClick={anterior} />
+          <button type="button" aria-label="Mostrar novedad 3" aria-controls="novedades-pista" onClick={siguiente} />
         </div>
       </div>
     </section>

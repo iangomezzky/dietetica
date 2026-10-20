@@ -12,8 +12,8 @@ function App() {
       {/* Dos grupos idénticos para que la cinta no salte al reiniciar. */}
       <div className="div-rotativo">
         <div className="cinta">
-          <div className="cinta-grupo"><span>Descubrí nuestros productos</span><span aria-hidden="true">✦</span><span>Nutrigo Santa Fe</span><span aria-hidden="true">✦</span></div>
-          <div className="cinta-grupo" aria-hidden="true"><span>Descubrí nuestros productos</span><span>✦</span><span>Nutrigo Santa Fe</span><span>✦</span></div>
+          <div className="cinta-grupo"><span></span><span aria-hidden="true"></span><span>15% OFF con transferencia</span><span aria-hidden="true"></span></div>
+          <div className="cinta-grupo" aria-hidden="true"><span>15% OFF con transferencia </span><span></span><span>15% OFF con transferencia</span><span></span></div>
         </div>
       </div>
 

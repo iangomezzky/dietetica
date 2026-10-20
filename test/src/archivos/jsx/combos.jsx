@@ -22,11 +22,11 @@ export default function Combos() {
 
     const flechaAnterior = document.querySelector("#combos-pista")
 
-    if (!flechaSiguiente) return;
+    if (!flechaAnterior) return;
 
 
-    flechaSiguiente.scrollBy({
-      right: 300,
+    flechaAnterior.scrollBy({
+      left: -300,
       behavior: "smooth",
     });
   }
@@ -42,16 +42,16 @@ export default function Combos() {
     >
       <div className="combos-encabezado">
         <div>
-          <span className="combos-ceja">PARA COMBINAR</span>
+          <span className="combos-ceja">PARA DISFRUTAR</span>
           <h2 className="combos-titulo" id="titulo-combos">
-            Combos
+            Nuestros MIX
           </h2>
         </div>
 
         <div className="combos-controles">
-          {/* Acá conectás tu lógica de desplazamiento */}
+         
           <button
-          onClick={siguiente}
+          onClick={anterior}
             type="button"
             className="combos-anterior"
             aria-label="Combo anterior"
