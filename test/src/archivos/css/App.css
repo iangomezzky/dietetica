@@ -149,9 +149,3 @@ html {
   }
 }
 
-/* Respeta la preferencia del sistema; fuera de ella la cinta siempre se mueve. */
-@media (prefers-reduced-motion: reduce) {
-  .cinta {
-    animation: none;
-  }
-}

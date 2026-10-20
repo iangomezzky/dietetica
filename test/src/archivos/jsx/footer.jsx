@@ -1,4 +1,4 @@
-import "../css/Footer.css";
+import "../css/footer.css";
 
 export default function Footer() {
   return (
@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="ng-footer-principal">
           <div className="ng-footer-identidad">
             <a className="ng-footer-marca" href="#inicio">
-              nutrigo<span>.</span>
+              nutrigÓ<span>.</span>
             </a>
 
             <p>
@@ -25,10 +25,9 @@ export default function Footer() {
 
           <nav className="ng-footer-menu" aria-label="Explorar">
             <span className="ng-footer-titulo">La tienda</span>
-            <a href="#novedades">Novedades <span>↗</span></a>
             <a href="#catalogo">Productos <span>↗</span></a>
             <a href="#promociones">Promociones <span>↗</span></a>
-            <a href="#local">El local <span>↗</span></a>
+            <a href="#sucursales">El local <span>↗</span></a>
           </nav>
 
           <div className="ng-footer-charla">
@@ -51,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="ng-footer-local" id="local">
+        <div className="ng-footer-local" id="sucursales">
 
           <a
             className="ng-footer-direccion"
@@ -74,8 +73,8 @@ export default function Footer() {
             </p>
           </div>
 
-          <a className="ng-footer-telefono" href="https://wa.me/543425922339" target="_blank" rel="noopener noreferrer">
-            <span className="ng-footer-titulo">Escribinos por WhatsApp</span>
+          <a className="ng-footer-telefono" href="tel:+543425922339">
+            <span className="ng-footer-titulo">Al otro lado del teléfono</span>
             <span>342 592 2339 ↗</span>
           </a>
 

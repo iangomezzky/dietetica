@@ -1,6 +1,39 @@
 import "../css/combos.css";
 
 export default function Combos() {
+
+  function siguiente() {
+
+
+    const flechaSiguiente = document.querySelector("#combos-pista")
+
+    if (!flechaSiguiente) return;
+
+
+    flechaSiguiente.scrollBy({
+      left: 300,
+      behavior: "smooth",
+    });
+  }
+
+
+  function anterior() {
+
+
+    const flechaAnterior = document.querySelector("#combos-pista")
+
+    if (!flechaSiguiente) return;
+
+
+    flechaSiguiente.scrollBy({
+      right: 300,
+      behavior: "smooth",
+    });
+  }
+
+
+
+
   return (
     <section
       className="combos"
@@ -18,6 +51,7 @@ export default function Combos() {
         <div className="combos-controles">
           {/* Acá conectás tu lógica de desplazamiento */}
           <button
+          onClick={siguiente}
             type="button"
             className="combos-anterior"
             aria-label="Combo anterior"
@@ -27,6 +61,7 @@ export default function Combos() {
           </button>
 
           <button
+            onClick={siguiente}
             type="button"
             className="combos-siguiente"
             aria-label="Combo siguiente"
