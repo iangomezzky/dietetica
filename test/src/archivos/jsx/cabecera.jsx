@@ -1,5 +1,5 @@
 import logo from "../../assets/logo.png";
-import "../css/Cabecera.css";
+import "../css/cabecera.css";
 import { Link } from "react-router-dom";
 export default function Cabecera() {
 
