@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../css/FormularioAcceso.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function FormularioAcceso({ modo = "registro" }) {
     const navigate = useNavigate();
@@ -96,9 +96,9 @@ export default function FormularioAcceso({ modo = "registro" }) {
     return (
         <section className="acceso">
             <div className="acceso-presentacion">
-                <a className="acceso-marca" href="/">
+                <link className="acceso-marca" to="/">
                     NUTRIGO<span>.</span>
-                </a>
+                </link>
 
                 <span className="acceso-ceja">
                     SANTA FE · CENTRO
@@ -114,9 +114,9 @@ export default function FormularioAcceso({ modo = "registro" }) {
                         : "Ingresá con tu correo y contraseña."}
                 </p>
 
-                <a className="acceso-volver" href="/">
+                <Link className="acceso-volver" to="/">
                     ← Volver a la tienda
-                </a>
+                </Link>
             </div>
 
             <div className="acceso-panel">
