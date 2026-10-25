@@ -96,9 +96,9 @@ export default function FormularioAcceso({ modo = "registro" }) {
     return (
         <section className="acceso">
             <div className="acceso-presentacion">
-                <link className="acceso-marca" to="/">
+                <Link className="acceso-marca" to="/">
                     NUTRIGO<span>.</span>
-                </link>
+                </Link>
 
                 <span className="acceso-ceja">
                     SANTA FE · CENTRO
