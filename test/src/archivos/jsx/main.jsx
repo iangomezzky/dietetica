@@ -8,7 +8,7 @@ import FormularioAcceso from "./FormularioAcceso.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />
 
@@ -22,6 +22,6 @@ createRoot(document.getElementById("root")).render(
           element={<FormularioAcceso modo="registro" />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
