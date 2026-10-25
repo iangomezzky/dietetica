@@ -1,7 +1,8 @@
 import logo from "../../assets/logo.png";
 import "../css/Cabecera.css";
-
+import { Link } from "react-router-dom";
 export default function Cabecera() {
+
   return (
     <header className="ng-header">
       <div className="ng-header-interior">
@@ -53,7 +54,7 @@ export default function Cabecera() {
 
             <a
               className="ng-dato"
-              href="https://wa.me/543425922339"
+              href="https://wa.me/543425147213"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -62,7 +63,7 @@ export default function Cabecera() {
               </span>
 
               <span className="ng-dato-valor">
-                342 592 2339
+                342 514 7213
               </span>
 
               <span className="ng-dato-detalle">
@@ -73,22 +74,17 @@ export default function Cabecera() {
 
           <div className="ng-utilidades">
             <a className="ng-carrito" href="#pedido">
-              <span
-                className="ng-bolsa"
-                aria-hidden="true"
-              />
-
+              <span className="ng-bolsa" aria-hidden="true" />
               <span>Carrito</span>
             </a>
 
-            <a
+            <Link
               className="ng-ingreso"
-              href="/admin"
+              to="/ingresar"
               aria-label="Ingresá a la administración"
             >
               Ingresá
-            </a>
-
+            </Link>
           </div>
         </div>
 
@@ -106,7 +102,7 @@ export default function Cabecera() {
 
           <a
             className="ng-whatsapp"
-            href="https://wa.me/543425922339"
+            href="https://wa.me/543425147213"
             target="_blank"
             rel="noopener noreferrer"
           >

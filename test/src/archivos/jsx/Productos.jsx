@@ -44,22 +44,22 @@ export default function Productos() {
         <label className="productos-buscador">Buscar productos<input type="search" placeholder="¿Qué estás buscando?" /></label>
       </div>
       <div className="productos-molde">
-        <span className="productos-solapa">El catálogo</span>
+        
         <div className="productos-grilla">
-          <Producto nombre="Mix de frutos secos" precio={20000} unidad="Precio por 1 kg" imagen={mix} onAgregar={agregarAlCarrito}>
+          <Producto nombre="Mix de frutos secos" precio={20000} unidad="Precio por 1 kg" onAgregar={agregarAlCarrito}>
             <span className="producto-etiqueta">Frutos secos</span><span className="producto-etiqueta">Mix</span>
           </Producto>
-          <Producto nombre="Quinoa pop" precio={7000} unidad="Precio por 1 kg" imagen={quinoa} onAgregar={agregarAlCarrito} className="sin-stock">
+          <Producto nombre="Quinoa pop" precio={7000} unidad="Precio por 1 kg"  onAgregar={agregarAlCarrito} className="sin-stock">
             <span className="producto-etiqueta">Cereales</span>
           </Producto>
-          <Producto nombre="Granola artesanal" precio={4500} unidad="Precio por 500 g" imagen={granola} onAgregar={agregarAlCarrito}>
+          <Producto nombre="Granola artesanal" precio={4500} unidad="Precio por 500 g"  onAgregar={agregarAlCarrito}>
             <span className="producto-etiqueta">Granolas</span><span className="producto-etiqueta">Desayuno</span>
           </Producto>
-          <Producto nombre="Pasta de maní" precio={5200} unidad="Precio por 350 g" imagen={mani} onAgregar={agregarAlCarrito}>
+          <Producto nombre="Pasta de maní" precio={5200} unidad="Precio por 350 g"  onAgregar={agregarAlCarrito}>
             <span className="producto-etiqueta">Untables</span>
           </Producto>
           {/* Ejemplo oculto: quitá className="oculto" para mostrarlo. */}
-          <Producto nombre="Otro producto" precio={0} unidad="Presentación" imagen={mix}  onAgregar={agregarAlCarrito} className="oculto" />
+          <Producto nombre="Otro producto" precio={0} unidad="Presentación" onAgregar={agregarAlCarrito} className="oculto" />
         </div>
         <div className="productos-pie"><span>Explorá el catálogo a tu ritmo.</span><button type="button" className="productos-ver-todo">Mostrar todo <span aria-hidden="true">↗</span></button></div>
       </div>

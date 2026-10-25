@@ -39,7 +39,7 @@ export default function Footer() {
 
             <a
               className="ng-footer-whatsapp"
-              href="https://wa.me/543425922339"
+              href="https://wa.me/543425147213"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -77,9 +77,9 @@ export default function Footer() {
             </p>
           </div>
 
-          <a className="ng-footer-telefono" href="tel:+543425922339">
+          <a className="ng-footer-telefono" href="tel:+543425147213">
             <span className="ng-footer-titulo">Al otro lado del teléfono</span>
-            <span>342 592 2339 ↗</span>
+            <span>342 514 7213 ↗</span>
           </a>
 
         </div>
@@ -87,7 +87,7 @@ export default function Footer() {
         <div className="ng-footer-base">
           <span>© 2026 Nutrigo · Santa Fe Centro</span>
 
-          <a href="mailto:nutrigofranquicias.santafe1@gmail.com">
+          <a href="mailto:iangomezkurgansky@gmail.com">
             Escribinos por correo ↗
           </a>
         </div>
